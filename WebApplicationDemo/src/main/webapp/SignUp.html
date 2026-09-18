@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+  
+</head>
+<body>
+
+  <div class="container">
+    <h2>Sign Up</h2>
+
+  <form action="register" method="post" onsubmit="return validate()">
+      <input type="text" name="username" placeholder="Username" id="uName">
+       
+       <br>
+       <br>
+      <input type="password" name="password" placeholder="Password" id="pass">
+
+       <br>
+       <br>
+      <select >
+        <option value="">Select Security Question</option>
+        <option>What is your pet name?</option>
+        <option>What is your favorite color?</option>
+        <option>What is your birth city?</option>
+      </select>
+    
+     <br>
+       <br>
+      
+      <input type="text" placeholder="Enter your answer">
+
+         <br>
+       <br>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+<script src="validation.js"></script>
+</body>
+</html>

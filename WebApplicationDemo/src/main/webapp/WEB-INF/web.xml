@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  
+  
+  <filter>
+  <filter-name>filter1</filter-name>
+  <filter-class>com.myfilter.ServiceFilter</filter-class>  
+  </filter>
+  
+  <filter-mapping>
+  <filter-name>filter1</filter-name>  
+  <url-pattern>/login</url-pattern>
+  </filter-mapping>
+  
+  
+  <filter>
+  <filter-name>filter2</filter-name>
+  <filter-class>com.myfilter.ServiceFilter1</filter-class>  
+  </filter>
+  
+  <filter-mapping>
+  <filter-name>filter2</filter-name>  
+  <url-pattern>/login</url-pattern>
+  </filter-mapping>
+  
+ 
+  
+  <context-param>
+  <param-name>driver</param-name>
+  <param-value>com.mysql.cj.jdbc.Driver</param-value>
+  
+  </context-param>
+  
+   <context-param>
+  <param-name>url</param-name>
+  <param-value>jdbc:mysql://@localhost:3306/User</param-value>
+  
+  </context-param>
+  
+  
+   <context-param>
+  <param-name>username</param-name>
+  <param-value>root</param-value>
+  
+  </context-param>
+  
+   <context-param>
+  <param-name>password</param-name>
+  <param-value>Apeksha@30</param-value>
+  
+  </context-param>
+  
+  
+  
+  
+  <servlet>
+  
+  <servlet-name>log</servlet-name>
+  <servlet-class>com.myservlet.LoginServlet</servlet-class>
+  
+   <init-param>
+  <param-name>company</param-name>
+  <param-value>infosys</param-value>
+  </init-param>
+  
+  
+  </servlet>
+  
+  <servlet-mapping>
+  
+  <servlet-name>log</servlet-name>
+  
+  <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  <servlet>
+  
+  <servlet-name>reg</servlet-name>
+  <servlet-class>com.myservlet1.RegisterServlet</servlet-class>
+  
+  </servlet>
+  
+  
+  <servlet-mapping>
+  
+  <servlet-name>reg</servlet-name>
+  
+  <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <servlet>
+  
+  <servlet-name>servlet2</servlet-name>
+  <servlet-class>com.myservlet.Myservlet</servlet-class>
+  
+  </servlet>
+  
+  
+  <servlet-mapping>
+  
+  <servlet-name>servlet2</servlet-name>
+  
+  <url-pattern>/s2</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+</web-app>
